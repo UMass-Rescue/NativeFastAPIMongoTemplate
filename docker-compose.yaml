@@ -1,0 +1,36 @@
+
+## NMFTApp
+version: "3"
+
+x-environment_file: &environment_file
+    env_file:
+    - ".env"
+
+services:
+  delegate_server:
+    container_name: delegate_server
+    build:
+      context: server/DelegateServer
+      dockerfile: Dockerfile
+    <<: *environment_file
+    ports:
+      - "8000:8000"
+  worker_example:
+    container_name: worker_example
+    <<: *environment_file
+    build:
+      context: server/WorkerExample
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8001"
+  mongo:
+    container_name: mongo
+    image: mongo:latest
+    command: mongod --port 27018
+    ports:
+        - '27018:27018'
+    volumes:
+      - mongodb_data_container:/data/db
+
+volumes:
+  mongodb_data_container:

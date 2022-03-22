@@ -1,0 +1,4 @@
+fastapi
+azure-storage-blob
+uvicorn
+pymongo
