@@ -1,13 +1,11 @@
-from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
-
-from pydantic import BaseModel
+import os
 from typing import Literal
 
 import requests
-import os
-
 from azure.storage.blob import BlobClient
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
 from pymongo import MongoClient
 
 worker_example_hostname = os.getenv("WORKER_EXAMPLE_HOSTNAME", "worker_example")

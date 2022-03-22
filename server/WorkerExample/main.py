@@ -1,9 +1,8 @@
-from fastapi import FastAPI
-
-from pydantic import BaseModel
+import random
 from typing import Literal
 
-import random
+from fastapi import FastAPI
+from pydantic import BaseModel
 
 app = FastAPI()
 
