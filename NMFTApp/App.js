@@ -9,7 +9,7 @@ const server_url = "http://localhost:8000/";
 const example_worker_endpoint = server_url + "predict_worker_example/";
 
 const blobSasUrl =
-  "https://jagathrescue.blob.core.windows.net/596e-backend?sp=racwdli&st=2022-03-02T18:39:33Z&se=2022-06-02T01:39:33Z&spr=https&sv=2020-08-04&sr=c&sig=7hdLnsjVUTPNmfzV2RJBkZdUP%2BrkVKrWlcEibwvKeIA%3D";
+  "https://jagathrescue.blob.core.windows.net/596e-backend?...";
 const blobContainer = "596e-backend";
 
 export default function App() {
